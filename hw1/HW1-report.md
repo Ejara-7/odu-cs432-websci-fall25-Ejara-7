@@ -7,6 +7,7 @@ Date: September 14, 2025
 
 
 Q1
+<img width="521" height="485" alt="image" src="https://github.com/user-attachments/assets/6bdf7636-bbea-4d5f-8492-aa0380a9c235" /> 
 
 - SCC (Strongly Connected Component): {A, B, C, D, G}  
   These nodes form the “core” where each page can reach every other page.  
