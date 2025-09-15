@@ -33,5 +33,30 @@ C. <img width="1471" height="689" alt="image" src="https://github.com/user-attac
 
 D. <img width="1913" height="919" alt="image" src="https://github.com/user-attachments/assets/bd80375e-c03f-4eed-8bba-07f86995dd31" />
 
+Q3
+<img width="1669" height="936" alt="image" src="https://github.com/user-attachments/assets/26d1adb1-4488-4eda-b64b-665e5d7c4760" />
+
+I wrote a single-threaded Python crawler (requests + BeautifulSoup) that does a queue-based BFS with occasional reseeding: 
+Start with a seed URL in the queue
+
+Fetch each URL with a 5s timeout and a custom User-Agent ('CS432-collector/1.0 (Ejara-7)'), allowing redirects.
+
+Filter pages: accept only responses whose `Content-Type` includes `text/html` and whose size is **> 1000 bytes** (use `Content-Length` when present, otherwise the actual body length).
+
+Record the final URI** (after any redirects) when a page qualifies.
+
+Extract links** from `<a href>` elements, convert to absolute URLs, normalize (drop `#fragments`, lowercase host, ensure a path), and add unseen links to the BFS queue.
+
+Deduplicate** with a `seen` set; **reseeding**: when the queue gets thin, push a random already-accepted page to keep discovering new sites.
+
+Continue until **500 unique** qualifying URIs are collected; write them to `hw1/collected-uris.txt`.
 
 
+
+Refernce:
+https://docs.google.com/presentation/d/178GkNtFAPB5fzs1D-wdCnlOdbcTyhpAIz_wKxVUaHVk/edit#slide=id.ga9773ac230_0_799
+https://apidog.com/blog/curl-options-request/
+https://realpython.com/python-web-scraping-practical-introduction/
+https://chatgpt.com/
+
+https://stackoverflow.com/questions/5724985/c-or-python-bruteforcing-to-find-text-in-many-webpages
