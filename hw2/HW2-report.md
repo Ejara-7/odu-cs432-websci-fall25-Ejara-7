@@ -42,3 +42,32 @@ TF-IDF: product of TF and IDF.
 The top 10 documents ranked by TF-IDF are shown in the table below:
 <img width="697" height="280" alt="image" src="https://github.com/user-attachments/assets/b6d46450-468d-4ed1-a6b5-49256d83dfe2" />
 
+# Q3
+### Q3: PageRank Results
+
+| PageRank | URI |
+|---------:|-----|
+| 0.80 | https://oducsreu.github.io/ |
+| 0.80 | https://www.ssrc.org/ |
+| 0.70 | https://www.odu.edu/ |
+| 0.70 | https://weiglemc.github.io/ |
+| 0.60 | https://www.cs.odu.edu/ |
+| 0.40 | https://vmasc.org/ |
+| 0.40 | https://www.catalyzex.com/ |
+| 0.20 | https://ws-dl.blogspot.com/ |
+| 0.00 | https://www.cornell.edu/ |
+| 0.00 | https://www.txyz.ai/ |
+
+Q2 (TF-IDF): Ranked URIs based on how often the word “research” appeared in each document compared to the entire corpus. This measures local relevance to the query. For example, ODU’s research compliance page ranked highest because it had the densest and most relevant mentions of “research.”
+
+Q3 (PageRank): Ranked URIs based on the importance of their domains across the web. Here, GitHub pages (oducsreu.github.io, weiglemc.github.io), ODU’s main site, and SSRC scored higher because their domains are considered more authoritative or widely linked, even if the specific page wasn’t the most textually relevant for “research.”
+
+Key difference:
+
+TF-IDF prioritizes relevance within your dataset.
+
+PageRank prioritizes overall authority on the web.
+
+That’s why some sites with high TF-IDF scores (like catalyzex.com) got pushed lower in PageRank, while more “trusted” domains (like odu.edu or ssrc.org) rose up.
+
+
