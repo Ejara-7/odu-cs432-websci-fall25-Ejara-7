@@ -1,0 +1,12 @@
+# HW2 large data — don't push these
+hw2/data/raw/
+hw2/data/processed/
+hw2/data/mapping.csv
+hw2/data/processed_summary.csv
+
+# Local/IDE stuff
+.vscode/
+.venv/
+*.log
+Thumbs.db
+.DS_Store
