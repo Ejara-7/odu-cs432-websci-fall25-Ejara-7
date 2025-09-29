@@ -70,4 +70,7 @@ PageRank prioritizes overall authority on the web.
 
 That’s why some sites with high TF-IDF scores (like catalyzex.com) got pushed lower in PageRank, while more “trusted” domains (like odu.edu or ssrc.org) rose up.
 
+# Q4
+The Kendall Tau-b correlation between the TF-IDF and PageRank results was 0.289, with a p-value of 0.291. This shows a weak positive correlation, but not statistically significant. In other words, while some overlap exists between query relevance (TF-IDF) and domain authority (PageRank), the two ranking methods measure different properties of the documents.
 
+# Q5 
